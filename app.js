@@ -16,4 +16,4 @@ const formSkickad = document.getElementById('formSkickad')
 //VALIDERINGSFUNKTIONER
 function valideraNamn(){
     const namnInput = namnInput.value.trim()
-}
+} ändring
