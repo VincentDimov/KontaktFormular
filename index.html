@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontaktformulär med Validering</title>
+    <link rel="stylesheet" href="styles.css" />
+    <source src="app.js" defer />
+  </head>
+  <body>
+    <header>Kontaktformulär med Validering</header>
+    <main>
+      <section>
+        <form id="form">
+          <div class="inputField">
+            <label for="namn">Namn: </label>
+            <input
+              id="namn"
+              type="text"
+              placeholder="Skriv ditt namn"
+              value="Skriv ditt namn"
+              required
+            />
+            <div class="fel" id="namnFel"></div>
+          </div>
+
+          <div class="inputField">
+            <label for="e-post">E-post: </label>
+            <input
+              id="epost"
+              type="email"
+              placeholder="Skriv din e-post"
+              value="din@email.se"
+              required
+            />
+            <div class="fel" id="epostFel"></div>
+          </div>
+
+          <div class="inputField">
+            <label for="tel">Telefonnummer: </label>
+            <input
+              id="tele"
+              type="tel"
+              placeholder="Skriv ditt telefonnummer"
+              value="+46731234567"
+              required
+            />
+            <div class="fel" id="telFel"></div>
+          </div>
+
+          <div class="inputField">
+            <label for="meddelande">Meddelande: </label>
+            <textarea
+              id="meddelande"
+              type="text"
+              name="meddelande"
+              rows="4"
+              placeholder="Skriv ditt meddelande"
+            ></textarea>
+            <div class="fel" id="meddelandeFel"></div>
+          </div>
+
+          <div class="""knappar">
+            <button type="submit">Skicka</button>
+            <button type="reset">Återställ</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="lyckadIfylld" id="""lyckadSkickad">
+        Tack! Ditt meddelande har skickats.
+        <br />
+        Vi återkommer inom kort!
+      </div>
+      <div id="felmeddelande"></div>
+    </main>
+  </body>
+</html>

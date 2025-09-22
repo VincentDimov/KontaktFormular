@@ -1,0 +1,19 @@
+header {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+}
+
+section #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form .inputField {
+    margin: 10px;
+    background-color: yellow;
+    text-align: left;
+    color: blue;
+}
