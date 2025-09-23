@@ -8,71 +8,37 @@
     <source src="app.js" defer />
   </head>
   <body>
-    <header>Kontaktformulär med Validering</header>
+    <header><h1>Kontaktformulär med validering</h1></header>
     <main>
       <section>
-        <form id="form">
-          <div class="inputField">
-            <label for="namn">Namn: </label>
-            <input
-              id="namn"
-              type="text"
-              placeholder="Skriv ditt namn"
-              value="Skriv ditt namn"
-              required
-            />
-            <div class="fel" id="namnFel"></div>
-          </div>
+        <form id="kontaktForm" novalidate>
+          <label for="namn">Namn: *</label>
+          <input id="namn" type="text" placeholder="Ange ditt namn"/>
+          <div class="felmeddelande" id="namnFel"></div>
 
-          <div class="inputField">
-            <label for="e-post">E-post: </label>
-            <input
-              id="epost"
-              type="email"
-              placeholder="Skriv din e-post"
-              value="din@email.se"
-              required
-            />
-            <div class="fel" id="epostFel"></div>
-          </div>
+          <label for="e-post">E-post: *</label>
+          <input id="epost" type="email" placeholder="Ange din e-post"/>
+          <div class="felmeddelande" id="epostFel"></div>
 
-          <div class="inputField">
-            <label for="tel">Telefonnummer: </label>
-            <input
-              id="tele"
-              type="tel"
-              placeholder="Skriv ditt telefonnummer"
-              value="+46731234567"
-              required
-            />
-            <div class="fel" id="telFel"></div>
-          </div>
+          <label for="telefon">Tel. nummer: *</label>
+          <input id="telefon" type="tel" placeholder="Ange ditt telefonnummer"/>
+          <div class="felmeddelande" id="teleFel"></div>
 
-          <div class="inputField">
-            <label for="meddelande">Meddelande: </label>
-            <textarea
-              id="meddelande"
-              type="text"
-              name="meddelande"
-              rows="4"
-              placeholder="Skriv ditt meddelande"
-            ></textarea>
-            <div class="fel" id="meddelandeFel"></div>
-          </div>
+          <label for="meddelande">Meddelande: </label>
+          <textarea id="meddelande" type="text" name="meddelande" rows="4" placeholder="Skriv ett meddelande"></textarea>            <div class="felmeddelande" id="meddelandeFel"></div>
 
-          <div class="""knappar">
+          <div class="knappar">
             <button type="submit">Skicka</button>
             <button type="reset">Återställ</button>
           </div>
+
+          <p class="formInfo">* Obligatoriskt fält</p>
+
+          <div class="lyckadIfylld" id="lyckadSkickad"></div>
         </form>
       </section>
 
-      <div class="lyckadIfylld" id="""lyckadSkickad">
-        Tack! Ditt meddelande har skickats.
-        <br />
-        Vi återkommer inom kort!
-      </div>
-      <div id="felmeddelande"></div>
+      
     </main>
   </body>
 </html>
