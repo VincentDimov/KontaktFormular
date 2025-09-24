@@ -13,7 +13,32 @@ section #form {
 }
 form .inputField {
     margin: 10px;
+    padding: 0.7rem;
+    border-radius: 20%;
     background-color: yellow;
     text-align: left;
     color: blue;
+}
+
+form .fel {
+    margin: 10px;
+    background-color: rgb(246, 246, 246);
+    text-align: left;
+    color: rgb(254, 0, 0);
+}
+
+#lyckadSkicka {
+  display: none;           /* dolt från början */
+  position: fixed;         /* fästs på skärmen */
+  top: 50%;                /* mitten på höjden */
+  left: 50%;               /* mitten på bredden */
+  transform: translate(-50%, -50%); /* centrerar exakt */
+  background: #fff;
+  color: green;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
