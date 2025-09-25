@@ -8,16 +8,9 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <header>Kontaktformulär med Validering</header>
+    <header><h1>Kontaktformulär med validering</h1></header>
     <main>
       <section>
-
-        <div class="lyckadIfylld" id="lyckadSkicka">
-          Tack! Ditt meddelande har skickats.
-          <br />
-          Vi återkommer inom kort!
-        </div>
-
         <form id="form">
           <div class="inputField">
             <label for="namn">Namn: </label>
@@ -25,17 +18,19 @@
               id="namn"
               type="text"
               placeholder="Skriv ditt namn"
+              value="Skriv ditt namn"
               required
             />
             <div class="fel" id="namnFel"></div>
           </div>
 
           <div class="inputField">
-            <label for="epost">E-post: </label>
+            <label for="e-post">E-post: </label>
             <input
               id="epost"
               type="email"
-              placeholder="din@email.se"
+              placeholder="Skriv din e-post"
+              value="din@email.se"
               required
             />
             <div class="fel" id="epostFel"></div>
@@ -44,9 +39,10 @@
           <div class="inputField">
             <label for="tel">Telefonnummer: </label>
             <input
-              id="tel"
+              id="tele"
               type="tel"
-              placeholder="+46731234567"
+              placeholder="Skriv ditt telefonnummer"
+              value="+46731234567"
               required
             />
             <div class="fel" id="telFel"></div>
@@ -68,9 +64,18 @@
             <button type="submit">Skicka</button>
             <button type="reset">Återställ</button>
           </div>
+
+          <p class="formInfo">* Obligatoriskt fält</p>
+
+          <div class="lyckadIfylld" id="lyckadSkickad"></div>
         </form>
       </section>
-      
+
+      <div class="lyckadIfylld" id="""lyckadSkickad">
+        Tack! Ditt meddelande har skickats.
+        <br />
+        Vi återkommer inom kort!
+      </div>
       <div id="felmeddelande"></div>
     </main>
     
