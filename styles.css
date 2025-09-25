@@ -1,4 +1,4 @@
-/* header {
+header {
     text-align: center;
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,18 +8,10 @@
 form .inputField {
     margin: 10px;
     padding: 0.7rem;
-    border-radius: 20%;
-    background-color: yellow;
     text-align: left;
-    color: blue;
 } */
 
-/* section #form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */ */
+
 
 body {
     background-color: whitesmoke;
@@ -33,18 +25,18 @@ header {
     font-weight: bold;
     margin: 20px;
     padding: 20px;
-
+    
     border-bottom: 2px solid;
     border-image-source: linear-gradient(
         to right,
         whitesmoke 15%,
         rgb(178, 202, 217) 50%,
         whitesmoke 85%
-    );
-    border-image-repeat: stretch;
-    border-image-slice: 1;
-}
-
+        );
+        border-image-repeat: stretch;
+        border-image-slice: 1;
+    }
+    
 h1 {
     color: rgb(81, 75, 75);
     font-size: 2rem;
@@ -53,54 +45,78 @@ h1 {
 
 textarea {
     font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
 }
-
+    
 p.formInfo {
     font-size: 0.8rem;
 }
-
+    
 form {
-    display: grid;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     color: rgb(81, 75, 75);
     
+    min-width: 200px;
     max-width: 500px;
     margin: 15px auto;
-    padding: 20px;
+    padding: 30px;
     background-image: linear-gradient(
         to bottom right,
         rgb(207, 230, 245),
         rgb(178, 202, 217)
-    );
-    border-radius: 10px;
-   
-    box-shadow: -2px 2px 2px rgba(119, 136, 153, 0.349);
+        );
+        border-radius: 10px;
+    
+        box-shadow: -2px 2px 2px rgba(119, 136, 153, 0.349);
 }
 
+.inputField {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 120px;
+}
+
+.inputField label {
+    width: 120px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 20px;
+}
+        
 input, textarea {
+    width: 200px;
     padding: 5px;
     resize: none;
     color: rgb(81, 75, 75);
-
+            
     border: 1px solid rgb(255, 255, 255);
     border-radius: 2px;
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
+input::placeholder, textarea::placeholder {
+    color: rgb(81, 75, 75, 0.6);
+    transition: 0.25s ease;
+}
+        
 input:focus, textarea:focus {
-  border-color: rgb(0, 204, 255);
-  outline: none;
+    border-color: rgb(0, 204, 255);
+    outline: none;
+}
+
+input:not(:focus){
+    border-color: rgb(255, 255, 255);
 }
 
 input:focus::placeholder, textarea:focus::placeholder {
     color: transparent;
-    transition: 0.3s;
+    transition: 0.25s ease;
 }
-
-label {
-    font-weight: bold;
-}
-
+        
 .knappar {
     display: flex;
     justify-content: center;
@@ -128,17 +144,36 @@ button:not(:hover) {
 }
 
 @media (max-width: 600px) {
-  form {
-    padding: 15px;
-  }
+    form {
+        padding: 15px;
+        max-width: 95%;
+    }
 
-  .knappar {
-    flex-direction: column;
-  }
+    .inputField {
+        padding-right: 0;  /* ta bort extra padding som stör */
+    }
 
-  button {
-    width: 100%;
-  }
+    .inputField label {
+        width: 30%;        /* labels tar 30% av bredden */
+        font-size: 0.8rem;
+        margin-right: 20px;
+        text-align: right;
+    }
+
+    input, textarea {
+        width: 65%;        /* input tar resterande bredd */
+        font-size: 0.9rem;
+        padding: 4px;
+        box-sizing: border-box;
+    }
+
+    .knappar {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
 }
 
 
@@ -163,4 +198,3 @@ form .fel {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-}

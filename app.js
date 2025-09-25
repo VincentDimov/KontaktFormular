@@ -21,7 +21,7 @@ function valideraNamn() {
     namnInput,
     namnFel,
     isValid,
-    "Ändast bokstäver är tillåtna, minst 2 bokstäver"
+    "Endast bokstäver är tillåtna, minst 2 bokstäver"
   );
   return isValid;
 }
@@ -94,6 +94,7 @@ function showValidation(field, errorDiv, isValid, meddelande) {
   });
 
   field.addEventListener("blur", () => {
+    if (field.value.trim() === "") return;
     switch (field.id) {
       case "namn":
         valideraNamn();
