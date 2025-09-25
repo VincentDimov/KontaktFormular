@@ -1,16 +1,10 @@
-header {
+/* header {
     text-align: center;
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 20px;
+    margin: 20px;
 }
-
-section #form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/* 
 form .inputField {
     margin: 10px;
     padding: 0.7rem;
@@ -18,7 +12,135 @@ form .inputField {
     background-color: yellow;
     text-align: left;
     color: blue;
+} */
+
+/* section #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */ */
+
+body {
+    background-color: whitesmoke;
+    font-family: Helvetica, sans-serif;
+    padding: 20px;
 }
+
+header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+    padding: 20px;
+
+    border-bottom: 2px solid;
+    border-image-source: linear-gradient(
+        to right,
+        whitesmoke 15%,
+        rgb(178, 202, 217) 50%,
+        whitesmoke 85%
+    );
+    border-image-repeat: stretch;
+    border-image-slice: 1;
+}
+
+h1 {
+    color: rgb(81, 75, 75);
+    font-size: 2rem;
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.278);
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p.formInfo {
+    font-size: 0.8rem;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    color: rgb(81, 75, 75);
+    
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 20px;
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(207, 230, 245),
+        rgb(178, 202, 217)
+    );
+    border-radius: 10px;
+   
+    box-shadow: -2px 2px 2px rgba(119, 136, 153, 0.349);
+}
+
+input, textarea {
+    padding: 5px;
+    resize: none;
+    color: rgb(81, 75, 75);
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: rgb(0, 204, 255);
+  outline: none;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: transparent;
+    transition: 0.3s;
+}
+
+label {
+    font-weight: bold;
+}
+
+.knappar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    width: 100px;
+    background-color: rgb(8, 92, 125);
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s;
+}
+
+button:not(:hover) {
+    transition: 0.5s;
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  .knappar {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
 
 form .fel {
     margin: 10px;
