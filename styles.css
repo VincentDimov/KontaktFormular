@@ -59,9 +59,10 @@ form {
     gap: 20px;
     color: rgb(81, 75, 75);
     
+    min-width: 200px;
     max-width: 500px;
     margin: 15px auto;
-    padding: 20px;
+    padding: 30px;
     background-image: linear-gradient(
         to bottom right,
         rgb(207, 230, 245),
@@ -85,24 +86,21 @@ form {
     text-align: right;
     margin-right: 20px;
 }
-
-input {
-    width: 200px;
-}
         
 input, textarea {
+    width: 200px;
     padding: 5px;
     resize: none;
     color: rgb(81, 75, 75);
             
     border: 1px solid rgb(255, 255, 255);
     border-radius: 2px;
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 input::placeholder, textarea::placeholder {
     color: rgb(81, 75, 75, 0.6);
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
         
 input:focus, textarea:focus {
@@ -116,7 +114,7 @@ input:not(:focus){
 
 input:focus::placeholder, textarea:focus::placeholder {
     color: transparent;
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
         
 .knappar {
@@ -146,17 +144,36 @@ button:not(:hover) {
 }
 
 @media (max-width: 600px) {
-  form {
-    padding: 15px;
-  }
+    form {
+        padding: 15px;
+        max-width: 95%;
+    }
 
-  .knappar {
-    flex-direction: column;
-  }
+    .inputField {
+        padding-right: 0;  /* ta bort extra padding som stör */
+    }
 
-  button {
-    width: 100%;
-  }
+    .inputField label {
+        width: 30%;        /* labels tar 30% av bredden */
+        font-size: 0.8rem;
+        margin-right: 20px;
+        text-align: right;
+    }
+
+    input, textarea {
+        width: 65%;        /* input tar resterande bredd */
+        font-size: 0.9rem;
+        padding: 4px;
+        box-sizing: border-box;
+    }
+
+    .knappar {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
 }
 
 
@@ -181,4 +198,3 @@ form .fel {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-}
